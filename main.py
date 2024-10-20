@@ -1,2 +1,2 @@
 print("hello world")
-monkey
+notmonkey = True
