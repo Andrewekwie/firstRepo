@@ -12,7 +12,8 @@ class student:
         self.surname = surname
         self.age = age
         self.height = height
-        student.student_amount += 1
+
+
 
     def printstudent(self):
         print(f"Name {self.ns.name}")
@@ -20,12 +21,15 @@ class student:
         print(f"age {self.age}")
         print(f"height {self.height}")
 
-
+    def Birthday(self):
+        print('Birthday')
+        self.age +=1
 
 print(f"before creating student {student.student_amount}")
-andrew = student(str(input("name ")),str(input("surname ")),input("age "),input("height "))
+andrew = student(str(input("name ")),str(input("surname ")),int(input("age ")),input("height "))
 
 print("")
 print("")
 andrew.printstudent()
+andrew.Birthday()
 print(f"after creating student {student.student_amount}")
