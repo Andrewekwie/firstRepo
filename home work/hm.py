@@ -14,7 +14,7 @@ class Animal:
         print(f"lenght {self.lenght}")
         print(f"age {self.age}")
 
-cat_simon =Animal(str(input("name ")),str(input("height ")),str(input("whidth ")),input("lenght "),input("age "))
+cat_simon =Animal((input("name ")),(input("height ")),(input("whidth ")),input("lenght "),input("age "))
 cat_simka =Animal("simka","8","6","50","2")
 
 cat_simon.print_stats()
