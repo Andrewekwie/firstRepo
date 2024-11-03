@@ -10,12 +10,17 @@ class NS:
 
 class student:
     student_amount = 0
-    def __init__ (self,name,surname,age=...,height=160):
+    def __init__ (self,name,surname,age=404,height=160):
+        if (type(age) != int):
+            raise TypeError("age need to be int")
+        if age <= 0:
+            raise TypeError("too young")
         self.ns = NS(name,surname)
         self.name = name
         self.surname = surname
         self.age = age
         self.height = height
+
 
 
 
@@ -30,7 +35,7 @@ class student:
         self.age +=1
 
 print(f"before creating student {student.student_amount}")
-andrew = student(str(input("name ")),str(input("surname ")),int(input("age ")),input("height "))
+andrew = student("andrew","danu",0,144)
 
 print("")
 print("")
