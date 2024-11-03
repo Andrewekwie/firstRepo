@@ -1,6 +1,10 @@
 
 class NS:
     def __init__(self,name:str,surname:str):
+        if(type(name)!= str):
+            raise TypeError("nameis not a string")
+        if  (type(surname) != str):
+            raise TypeError("surname is not a string")
         self.name = name
         self.surname = surname
 
