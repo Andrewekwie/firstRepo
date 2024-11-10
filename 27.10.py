@@ -1,44 +1,47 @@
-
-class NS:
-    def __init__(self,name:str,surname:str):
-        if(type(name)!= str):
-            raise TypeError("nameis not a string")
-        if  (type(surname) != str):
-            raise TypeError("surname is not a string")
+import logging
+logging.basicConfig(
+    level=logging.DEBUG,
+    filename="logs.log",
+    filemode="a",
+    format=":%(levelname)s %(asctime)s - %(message)s"
+    )
+logging.info("server start")
+class NameSurname:
+    def __init__(self, name, surname):
+        if(type(name) != str):
+            raise TypeError(f"Name is not a string ")
+        if(type(surname) != str):
+            raise TypeError(f"Surname is not a string '{type(surname) }'")
         self.name = name
         self.surname = surname
 
-class student:
+class Student:
     student_amount = 0
-    def __init__ (self,name,surname,age=404,height=160):
-        if (type(age) != int):
-            raise TypeError("age need to be int")
-        if age <= 0:
-            raise TypeError("too young")
-        self.ns = NS(name,surname)
-        self.name = name
-        self.surname = surname
+    def __init__ (self,name, surname , age, height=160):
+        self.ns = NameSurname(name, surname)
         self.age = age
         self.height = height
+        Student.student_amount += 1
 
-
-
-
-    def printstudent(self):
-        print(f"Name {self.ns.name}")
-        print(f"surname {self.ns.surname}")
-        print(f"age {self.age}")
-        print(f"height {self.height}")
+    def printStudent(self):
+        print(f'Name: {self.ns.name}')
+        print(f'Surname: {self.ns.surname}')
+        print(f'Age: {self.age}')
+        print(f'Height: {self.height}')
 
     def Birthday(self):
-        print('Birthday')
-        self.age +=1
+        self.age += 1
+        print(f'Happy Birthday to {self.ns.name}. Now you {self.age}!')
 
-print(f"before creating student {student.student_amount}")
-andrew = student("andrew","danu",0,144)
 
-print("")
-print("")
-andrew.printstudent()
-andrew.Birthday()
-print(f"after creating student {student.student_amount}")
+try:
+    logging.debug("in proces")
+    first_student = Student("andrew", "danu", 12)
+    logging.info(f"info {first_student.ns.name} {first_student.ns.surname}")
+except Exception as error:
+    print(error)
+
+
+print("Next code")
+logging.info("server end")
+#first_student.Birthday()

@@ -7,11 +7,11 @@ logging.basicConfig(
     )
 
 
-# logging.debug("debug")
-# logging.info("info")
-# logging.warning("warning")
-# logging.error("error")
-# logging.critical("critical")
+logging.debug("debug")
+logging.info("info")
+logging.warning("warning")
+logging.error("error")
+logging.critical("critical")
 
 try:
     print(10/0)

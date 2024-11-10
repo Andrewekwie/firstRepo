@@ -1,9 +1,13 @@
 import  logging
 logging.basicConfig(level=logging.INFO,
                     filename="logs.log",
-                    filemode="a", format="&(levelname)s:%()")
+                    filemode="a", format="&(levelname)s:%(asctime)s - %(message)")
 class NS:
     def __init__(self,name:str,surname:str):
+        if(type(name)!= str):
+            raise TypeError("name is not a string")
+        if  (type(surname) != str):
+            raise TypeError("surname is not a string")
         self.name = name
         self.surname = surname
 
@@ -17,6 +21,8 @@ class student:
         self.height = height
         self.studing = studing
         self.grade = grade
+        student.student_amount +=1
+        logging.INFO(f"творення студента {self.ns.name},{self.ns.surname}")
 
 
 
@@ -45,23 +51,33 @@ class student:
 
 
 
+    # def Birthday(self):
+    #     print('happy Birthday')
+    #     self.age +=1
+
+print(f"before creating student {student.student_amount}")
+try:
+
+    andrew = student("andrew","danu",11 , 145, "yes")
+
+
+    print(f"after creating student {student.student_amount}")
+
+
+
+    if andrew.studing == "":
+        pass
+    else:
+        andrew = student(grade=10, name=andrew.name, surname=andrew.surname, age=andrew.age, height=andrew.height,
+                         studing=andrew.studing)
+
+    print("")
+    print("")
+    andrew.printstudent()
+    # andrew.Birthday()
+except Exception as error:
+    print(error)
 
 
 
 
-
-
-
-    def Birthday(self):
-        print('happy Birthday')
-        self.age +=1
-andrew = student((input("name ")),(input("surname ")),int(input("age ")),input("height "),input("studing (if not skip ) "))
-if andrew.studing == "":
-    pass
-else:
-    andrew = student(grade=int(input("grades ")),name=andrew.name,surname=andrew.surname,age=andrew.age,height=andrew.height,studing=andrew.studing)
-
-print("")
-print("")
-andrew.printstudent()
-andrew.Birthday()
