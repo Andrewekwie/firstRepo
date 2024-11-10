@@ -3,3 +3,33 @@ Traceback (most recent call last):
   File "C:\Users\ps21\PycharmProjects\firstRepo2\10-11\L3_33.py", line 17, in <module>
     print(10/0)
 ZeroDivisionError: division by zero
+:DEBUG 2024-11-10 10:26:47,526 - debug
+:INFO 2024-11-10 10:26:47,526 - info
+:WARNING 2024-11-10 10:26:47,526 - warning
+:ERROR 2024-11-10 10:26:47,526 - error
+:CRITICAL 2024-11-10 10:26:47,526 - critical
+:ERROR 2024-11-10 10:26:47,526 - Exception
+Traceback (most recent call last):
+  File "C:\Users\ps21\PycharmProjects\firstRepo2\10-11\L3_33.py", line 17, in <module>
+    print(10/0)
+ZeroDivisionError: division by zero
+:DEBUG 2024-11-10 10:26:48,874 - debug
+:INFO 2024-11-10 10:26:48,874 - info
+:WARNING 2024-11-10 10:26:48,874 - warning
+:ERROR 2024-11-10 10:26:48,874 - error
+:CRITICAL 2024-11-10 10:26:48,874 - critical
+:ERROR 2024-11-10 10:26:48,874 - Exception
+Traceback (most recent call last):
+  File "C:\Users\ps21\PycharmProjects\firstRepo2\10-11\L3_33.py", line 17, in <module>
+    print(10/0)
+ZeroDivisionError: division by zero
+:DEBUG 2024-11-10 10:26:49,992 - debug
+:INFO 2024-11-10 10:26:49,992 - info
+:WARNING 2024-11-10 10:26:49,993 - warning
+:ERROR 2024-11-10 10:26:49,993 - error
+:CRITICAL 2024-11-10 10:26:49,993 - critical
+:ERROR 2024-11-10 10:26:49,993 - Exception
+Traceback (most recent call last):
+  File "C:\Users\ps21\PycharmProjects\firstRepo2\10-11\L3_33.py", line 17, in <module>
+    print(10/0)
+ZeroDivisionError: division by zero

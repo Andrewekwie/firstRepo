@@ -1,4 +1,7 @@
-
+import  logging
+logging.basicConfig(level=logging.INFO,
+                    filename="logs.log",
+                    filemode="a", format="&(levelname)s:%()")
 class NS:
     def __init__(self,name:str,surname:str):
         self.name = name
