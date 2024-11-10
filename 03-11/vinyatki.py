@@ -5,8 +5,7 @@ try:
     print(value_1)
 
 
-except Exception:
-    print("idk")
+except Exception:    print("idk")
 except ZeroDivisionError:
     print("Math theacher: F!")
 except NameError:
