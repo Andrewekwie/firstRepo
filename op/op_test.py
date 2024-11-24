@@ -1,24 +1,24 @@
 # 1 = 33.8
+class Temperature:
+    def __init__(self, temperature: float = -12.15):
+        self.temper = temperature
+        self.set_temperature(temperature)
 
-corf = input("C or F - ")
-
-class temperature():
-    def __init__(self, Celsius: float,Fahrenheit: float):
-        self.Celsius = Celsius
-        self.Fahrenheit = Fahrenheit
-
-
-    if corf == "C" or corf == "c":
-        def celsius_to_fahrenheit(Celsius):
-            print(Celsius * 33.8,"F")
-    celsius_to_fahrenheit(Celsius=temperature.Celsius)
-
+    def celsius_to_fahrenheit(self):
+        return self.temper * 9 / 5 + 32
 
 
     def fahrenheit_to_celsius(self):
-        pass
+        return (self.temper - 32) * 9 / 5
 
 
     def set_temperature(self, temperature: float):
-        pass
-temperature(1,20)
+        if temperature < -273.15:
+            raise ArithmeticError(f"temperature < -273.15")
+
+
+
+
+temp=Temperature(11.0)
+print(temp.celsius_to_fahrenheit())
+print(temp.fahrenheit_to_celsius())
