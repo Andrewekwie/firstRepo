@@ -16,7 +16,7 @@ while True:
             soup.find_all( 'div', {'class':"sc-b3fc6b7-0 dzgUIj"})
 
             ]
-    file = open("coins.txt","w")
+    file = open("coins.txt", "w")
     for i in range(0,len(coins[0])):
         print(f"{coins[0][i].text} {coins[1][i].text} {coins[2][i].text}")
         file.write(f"{coins[0][i].text} {coins[1][i].text} {coins[2][i].text}\n")
