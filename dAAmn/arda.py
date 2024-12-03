@@ -13,7 +13,7 @@ pwm_5.write(0)
 def on_slider_change(val):
     try:
 
-        pwm_value = (int(val) - 1) / 127  # Изменение диапазона от 1-128 до 0-1
+        pwm_value = (int(val) - 1) / 254  # Изменение диапазона от 1-128 до 0-1
         pwm_5.write(pwm_value)
         print(f"PWM Value: {pwm_value}")
     except Exception as e:
@@ -25,8 +25,8 @@ root.title("trothle")
 root.geometry("300x150")
 
 
-slider = tk.Scale(root, from_=1, to=128, orient=tk.HORIZONTAL, command=on_slider_change)
-slider.pack(pady=20)
+slider = tk.Scale(root, from_=1, to=200, orient=tk.VERTICAL, command=on_slider_change,length=2500)
+slider.pack(pady=5)
 
 
 root.mainloop()
